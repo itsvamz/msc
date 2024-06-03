@@ -8,17 +8,18 @@ import Home from './pages/Home';
 import Signin from './pages/Signin';
 import About from './pages/About';
 import Flower from './pages/Flower';
+import './index.css';
 
-function App() {
+const App = () => {
   return (
-    <div>
+<div className='min-h-screen' style={{ backgroundColor: 'pink !important' }}>
       <AuthContextProvider>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/signin' element={<Signin />} />
-          <Route path='/flower' element={<Flower />} />
           <Route path='/about' element={<About />} />
+          <Route path='/flower' element={<Flower />} />
+          <Route path='/signin' element={<Signin />} />
           <Route
             path='/account'
             element={
@@ -31,6 +32,6 @@ function App() {
       </AuthContextProvider>
     </div>
   );
-}
+};
 
 export default App;
