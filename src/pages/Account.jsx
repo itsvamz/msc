@@ -1,8 +1,5 @@
 import React from 'react';
 import { UserAuth } from '../context/AuthContext';
-import backgroundImage from './background.png'; // Import your background image
-
-
 
 const Account = () => {
   const { logOut, user } = UserAuth();
@@ -15,40 +12,17 @@ const Account = () => {
     }
   };
 
-  const containerStyle = {
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '100vh', // Adjust height as needed
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: '#ffffff', // Text color
-    textAlign: 'center',
-  };
-
-  const buttonStyle = {
-    border: '1px solid #ffffff', // Button border color
-    padding: '0.5rem 1rem',
-    marginTop: '2rem',
-    cursor: 'pointer',
-  };
-
   return (
-    <div style={containerStyle}>
-      <div className='w-[300px]'>
-        <h1 className='text-2xl font-bold'>Account</h1>
-        <div>
-          <p>Welcome, {user?.displayName}</p>
-        </div>
-        <button onClick={handleSignOut} style={buttonStyle}>
-          Logout
-        </button>
+    <div className='w-[300px] m-auto'>
+      <h1 className='text-center text-2xl font-bold pt-12'>Account</h1>
+      <div>
+        <p>Welcome, {user?.displayName}</p>
       </div>
+      <button onClick={handleSignOut} className='border py-2 px-5 mt-10'>
+        Logout
+      </button>
     </div>
   );
 };
-
 
 export default Account;

@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between bg-gray-200 w-full p-4'>
       <h1 className='text-center text-2xl font-bold'>
-        Apni Pehchan
+        Firebase Google Auth & Context
       </h1>
       {user?.displayName ? (
         <button onClick={handleSignOut}>Logout</button>
